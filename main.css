@@ -74,7 +74,7 @@
 .phoneScreen {
   height: 120px;
   width: 64px;
-  background:url("./assets/phoneMockup1.PNG") no-repeat;
+  background:url("./assets/phoneMockup1.jpg") no-repeat;
   background-size: contain;
   position: absolute;
   margin: auto;
