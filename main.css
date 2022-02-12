@@ -1,33 +1,192 @@
-html,
-body {
-  margin: 0;
-  padding: 0;
-  font-size: 100%;
-  line-height: 1.5;
+.smallScreen {
+  display: none;
 }
-
-body {
-  width: 100%;
-  height: 100vh;
-  background: url('assets/freedom.jpg') no-repeat center;
-  background-size: cover;
-  color: #333;
-}
-
-.wrapper {
-  padding-top: 4rem;
+.container {
+  background-color: rgb(214, 214, 214);
+  height: 80%;
   width: 90%;
-  margin: 0 auto;
-  text-align: center;
+  border-radius: 15%;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.laptop {
+  
+}
+.screen {
+  max-height: 200px;
+  max-width: 300px;
+  background:url("./assets/mockup1.jpg") no-repeat;
+  background-size: cover;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border: solid 8px rgb(41, 44, 44);
+  border-radius: 5% 5% 0 0;
 }
 
-.quote {
-  font-family: 'Julius Sans One', sans-serif;
-  font-size: 2.5rem; 
+.cam {
+  height: 2px;
+  width: 2px;
+  background-color: rgb(180, 60, 39);
+  border-radius: 50%;
+  position:absolute;
+  top: -8px;
+  left: 147px;
+  border: solid 3px rgb(82, 80, 80);
 }
 
-.author {
-  font-family: 'Crimson Text', serif;
-  font-size: 1.5rem;
-  font-style: italic;
+.house {
+  max-height: 15px;
+  width: 380px;
+  max-width: 400px;
+  background-color: rgb(167, 167, 167);
+  border-radius: 0 0 50% 50%;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom:-230px;
+  right: 0;
+  left: 0;
+}
+
+
+/* Phone */
+.phone {
+    height: 140px;
+    width: 75px;
+    background-color: rgb(26, 27, 27);
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom:-110px;
+    right: 250px;
+    left: 0px;
+    border-radius: 10px;
+    z-index: 3;
+}
+.phoneScreen {
+  height: 120px;
+  width: 64px;
+  background:url("./assets/phoneMockup1.PNG") no-repeat;
+  background-size: contain;
+  position: absolute;
+  margin: auto;
+  z-index: 3;
+  top: 0;
+  bottom: 2px;
+  right: 0;
+  left: 0;
+}
+.button {
+  height: 8px;
+  width: 8px;
+  background-color: rgb(13, 14, 14);
+  border-radius: 50%;
+  position:absolute;
+  bottom: 4px;
+  left: 32px;
+  border: solid 1px rgb(167, 167, 167);
+  z-index: 3;
+}
+/* Tablet */
+.tablet {
+  height: 200px;
+  width: 150px;
+  background-color: rgb(26 , 27, 27);
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: -40px;
+  left: 250px;
+  border-radius: 10px;
+  z-index: 2;
+}
+.tabletScreen {
+  height: 180px;
+  width: 160px;
+  background:url("./assets/tabletMockup.jpg") no-repeat;
+  background-size: contain;
+  position: absolute;
+  margin: auto;
+  z-index: 3;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 8px;
+}
+/* Mobil Wiew */
+@media screen and (max-width: 520px) {
+  .tablet, .phone {
+    display: none;
+  }
+
+  .laptop {
+      max-height: 50%;
+      max-width: 60%;
+      position: absolute;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      right: 50px;
+      left: 0;
+      border-radius: 15%;
+  }
+  
+  .screen {
+    max-height: 110px;
+    max-width: 180px;
+    background:url("./assets/mockup1.jpg") no-repeat;
+    background-size: cover;
+    position: inherit;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border: solid 5px rgb(41, 44, 44);
+    border-radius: 2.5% 2.5% 0 0;
+  }
+  
+  .cam {
+    height: 1px;
+    width: 1px;
+    background-color: tomato;
+    border-radius: 50%;
+    position:absolute;
+    top: -4px;
+    left: 90px;
+    border: solid 1px rgb(167, 167, 167);
+  }
+  
+  .house {
+    max-height: 10px;
+    max-width: 240px;
+    background-color: rgb(167, 167, 167);
+    border-radius: 0 0 50% 50%;
+    position: absolute;
+    margin: auto;
+    top: -100px;
+    right: 0;
+    left: 0;
+  }
+}
+/* Screen too small */
+@media screen and (max-width: 320px) {
+  .smallScreen {
+    display: block;
+    font-size: small;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+  }
+  .container, .screen, .house, .cam {
+    display: none;
+  }
 }
